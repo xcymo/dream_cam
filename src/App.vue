@@ -1,29 +1,58 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="title">
+      有梦相机
+      <span
+        class="arrow-back"
+        v-show="$route.meta.hasBack"
+        @click="goBack()"
+      ></span>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    goBack() {
+      this.$router.go(-1)
+    }
+  }
+}
+</script>
 
 <style lang="less">
+* {
+  padding: 0;
+  margin: 0;
+}
+.title {
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 44px;
+  padding-top: 22px;
+  border-bottom: 1px solid #c3c3c3;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: #fff;
+  min-height: 100vh;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.arrow-back {
+  display: inline-block;
+  position: absolute;
+  left: 5vw;
+  bottom: 4vw;
+  width: 10px;
+  height: 10px;
+  border-left: 4px solid #2c3e50;
+  border-top: 4px solid #2c3e50;
+  transform: rotate(-45deg);
 }
 </style>
