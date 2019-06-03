@@ -19,13 +19,13 @@
       </div>
       <router-link to="more">
         <div class="icon-box">
-          <img src="../assets/tbd.png" class="sig-pic" />
+          <img src="../assets/tbd.png" class="sig-pic pic-l2" />
           <div class="cam-name">更多功能</div>
         </div>
       </router-link>
       <router-link to="support">
         <div class="icon-box">
-          <img src="../assets/spt.png" class="sig-pic" />
+          <img src="../assets/spt.png" class="sig-pic pic-l2" />
           <div class="cam-name">支持我们</div>
         </div>
       </router-link>
@@ -102,7 +102,6 @@ a {
   height: 50vw;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   position: relative;
   .cam-name {
@@ -116,6 +115,9 @@ a {
     width: 19.2vw;
     height: 19.2vw;
     margin: 0 2.4vw;
+  }
+  .pic-l2{
+    margin-top: 10vw;
   }
 }
 .flex {
